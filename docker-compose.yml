@@ -1,0 +1,9 @@
+services:
+  bor-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile.beta
+    container_name: bor-builder
+    volumes:
+      - ./build:/bor/build
+    command: make bor
